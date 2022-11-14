@@ -1,0 +1,13 @@
+./aligned_img\Chondan\Chondan.400.png
+./aligned_img\Chondan\Chondan.401.png
+./aligned_img\Chondan\Chondan.402.png
+./aligned_img\Chondan\Chondan.403.png
+./aligned_img\Chondan\Chondan.404.png
+./aligned_img\Chondan\Chondan.405.png
+./aligned_img\Cvic\20221019_125056.png 856 1337 2051 2789
+./aligned_img\Cvic\20221019_125059.png 1293 1373 2110 2765
+./aligned_img\Cvic\20221019_125102.png 863 1227 1952 2912
+./aligned_img\Prawee\Prawee.214.png
+./aligned_img\Prawee\Prawee.215.png
+./aligned_img\Prawee\Prawee.217.png
+./aligned_img\Prawee\Prawee.219.png

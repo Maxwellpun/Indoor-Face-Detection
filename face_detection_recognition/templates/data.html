@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<body>
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row container d-flex justify-content-center">
+                <div class="col-lg-6 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Timestamp & Locations</h4>
+                            <p class="card-description">
+                                past 30 days
+                            </p>
+                                
+        <!--BEGIN SEARCH BOX -->
+    <nav class="navbar fixed-bottom navbar-light bg-light justify-content-center">                        
+        <div class="search_box">
+            <form action="" id="form2">
+                <div>
+                    <input type="text" id="search">
+                    <input class="btn btn-outline-dark" type="button" id="submit_form" onclick="checkInput()" value="Search">
+                </div>
+            </form>
+        </div>
+            <!-- Split dropup button -->
+        <div class="btn-group dropup">
+            <button type="button" class="btn btn-secondary">
+            Select Name
+            </button>
+            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+            <!-- Dropdown menu links -->
+            </ul>
+        </div>
+    </nav>    
+        <!--END SEARCH BOX -->
+        <script>
+            function checkInput() {
+                var query = document.getElementById('search').value;
+                window.find(query);
+                return true;
+            }
+        </script>
+
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            {% for header in headings %}
+                                            <th scope="col">{{ header }}</th>
+                                            {% endfor %}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for row in data %}
+                                        <tr>
+                                            {% for cell in row %}
+                                            <td>{{ cell }}</td>
+                                            {% endfor %}
+                                        </tr> 
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>     
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<link rel="stylesheet" href="{{url_for('static', filename='css/custom.css')}}">
+{% endblock%}
